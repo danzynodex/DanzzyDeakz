@@ -110,6 +110,7 @@ ToggleButton.Position = UDim2.new(0.05, 0, 0, 50)
 ToggleButton.Text = "Activate"
 ToggleButton.BackgroundColor3 = Color3.fromRGB(180, 90, 90)
 ToggleButton.TextColor3 = Color3.fromRGB(255, 255, 255)
+ToggleButton.BackgroundTransparency = 1
 ToggleButton.TextScaled = true
 ToggleButton.Font = Enum.Font.SourceSans
 Instance.new("UICorner", ToggleButton).CornerRadius = UDim.new(0, 10)
@@ -130,6 +131,7 @@ IncreaseButton.Position = UDim2.new(0, 0, 0, 0)
 IncreaseButton.Text = "+︎"
 IncreaseButton.BackgroundColor3 = Color3.fromRGB(180, 100, 100)
 IncreaseButton.TextColor3 = Color3.fromRGB(255, 255, 255)
+IncreaseButton.BackgroundTransparency = 1
 IncreaseButton.TextScaled = true
 IncreaseButton.Font = Enum.Font.SourceSans
 Instance.new("UICorner", IncreaseButton).CornerRadius = UDim.new(0, 10)
@@ -140,6 +142,7 @@ DecreaseButton.Position = UDim2.new(0.55, 0, 0, 0)
 DecreaseButton.Text = "-"
 DecreaseButton.BackgroundColor3 = Color3.fromRGB(120, 60, 60)
 DecreaseButton.TextColor3 = Color3.fromRGB(255, 255, 255)
+DecreaseButton.BackgroundTransparency = 1
 DecreaseButton.TextScaled = true
 DecreaseButton.Font = Enum.Font.SourceSans
 Instance.new("UICorner", DecreaseButton).CornerRadius = UDim.new(0, 10)
@@ -160,6 +163,7 @@ MinimizeButton.Position = UDim2.new(1, -45, 0, 2.5)
 MinimizeButton.Text = "-"
 MinimizeButton.BackgroundColor3 = Color3.fromRGB(200, 80, 80)
 MinimizeButton.TextColor3 = Color3.fromRGB(255, 255, 255)
+MinimizeButton.BackgroundTransparency = 1
 MinimizeButton.TextScaled = true
 MinimizeButton.Font = Enum.Font.SourceSans
 Instance.new("UICorner", MinimizeButton).CornerRadius = UDim.new(0, 10)
@@ -301,13 +305,13 @@ end)
 
 -- Increase Button Click
 IncreaseButton.MouseButton1Click:Connect(function()
-    hitboxSize = math.min(hitboxSize + 5, MAX_HITBOX_SIZE)
+    hitboxSize = math.min(hitboxSize + 100, MAX_HITBOX_SIZE)
     updateHitbox()
 end)
 
 -- Decrease Button Click
 DecreaseButton.MouseButton1Click:Connect(function()
-    hitboxSize = math.max(hitboxSize - 5, MIN_HITBOX_SIZE)
+    hitboxSize = math.max(hitboxSize - 100, MIN_HITBOX_SIZE)
     updateHitbox()
 end)
 
