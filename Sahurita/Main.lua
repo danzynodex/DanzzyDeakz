@@ -8,15 +8,15 @@ local LocalPlayer = Players.LocalPlayer
 local Camera = workspace.CurrentCamera
 
 -- Game Check Configuration
-local TARGET_GAME_ID = 137976880890262 -- ID for https://www.roblox.com/games/137976880890262
+local TARGET_GAME_ID = 14493533447 -- ID for https://www.roblox.com/games/14493533447
 
 -- Anti-Lag Configuration
 local DEBOUNCE_TIME = 0.005 -- Ultra-low input lag
-local ATTACK_COOLDOWN = 0.01 -- Super-fast attack rate
+local ATTACK_COOLDOWN = 0.001 -- Super-fast attack rate
 local MAX_HITBOX_SIZE = 10000 -- Insane max hitbox size
 local MIN_HITBOX_SIZE = 1 -- Minimum hitbox size
-local HITBOX_UPDATE_RATE = 1/120 -- 120 FPS hitbox updates
-local SLAP_POWER = 100000 -- Mega slap force (100k studs into the air)
+local HITBOX_UPDATE_RATE = 1/240 -- 120 FPS hitbox updates
+local SLAP_POWER = 1000000 -- Mega slap force (1m studs into the air)
 
 -- Executor Compatibility: Safe wait function
 local function safeWait(time)
